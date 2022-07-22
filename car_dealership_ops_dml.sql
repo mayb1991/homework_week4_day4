@@ -51,14 +51,14 @@ VALUES(
     'Toyota',
     'Trundra',
     2022,
-    35,250,
+    35250,
     TRUE,
     FALSE
 ),(
     'Toyota',
     'Avalon',
     2020,
-    32,500,
+    32500,
     FALSE,
     TRUE
    
@@ -66,7 +66,7 @@ VALUES(
     'Dodge',
     '3500',
     2015,
-    45,950,
+    45950,
     FALSE,
     TRUE
     
