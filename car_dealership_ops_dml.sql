@@ -107,9 +107,9 @@ INSERT INTO invoice(
     amount
 )
 VALUES(
-    '1500',
+    '1500'
 ),(
-    '65850',
+    '65850'
 ),(
     '250'
 );
