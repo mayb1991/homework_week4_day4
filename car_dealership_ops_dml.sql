@@ -115,22 +115,35 @@ VALUES(
 );
 
 
+CREATE OR REPLACE FUNCTION growing_business(
+    customer INTEGER,
+    f_name VARCHAR(50),
+    l_name VARCHAR(50)
+)
+RETURNS VOID
+LANGUAGE plpgsql
+AS
+$MAIN$
+BEGIN
+    INSERT INTO customer(customer_id, first_name, last_name)
+    VALUES (customer, f_name, l_name);
+END
+$MAIN$
+SELECT growing_business(4, 'Dog', 'Man');
 
 
--- CREATE FUNCTION add_a_brad(
---     actor INTEGER,
---     f_name VARCHAR(45),
---     l_name VARCHAR(45),
---     updated TIMESTAMP WITHOUT TIME ZONE
--- )
--- RETURNS VOID
--- LANGUAGE plpgsql
--- AS
--- $MAIN$
--- BEGIN
---     INSERT INTO actor(actor_id, first_name, last_name, last_update)
---     VALUES (actor, f_name, l_name, updated);
-
--- END
--- $MAIN$
--- SELECT add_a_brad(999, 'Brad', "May", NOW()::TIMESTAMP)
+CREATE OR REPLACE FUNCTION growing_staff(
+    salesperson INTEGER,
+    f_name VARCHAR(50),
+    l_name VARCHAR (50)
+)
+RETURNS VOID
+LANGUAGE plpgsql
+AS
+$MAIN$
+BEGIN
+    INSERT INTO salesperson(salesperson_id, first_name, last_name)
+    VALUES(salesperson, f_name, l_name);
+END
+$MAIN$
+SELECT growing_staff(4, 'Jefferson', 'David');
