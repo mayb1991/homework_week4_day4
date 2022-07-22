@@ -72,6 +72,9 @@ VALUES(
     
 );
 
+ALTER TABLE cars
+ALTER COLUMN MSRP TYPE MONEY;
+
 INSERT INTO mechanic(
     first_name,
     last_name
